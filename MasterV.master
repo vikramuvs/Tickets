@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterV.master.cs" Inherits="MasterV" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Styles/Hmenu1.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Styles.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Home.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Modal.css"/>
+    <link href="Styles/jquery-ui.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%" align="center" border="0" style="border-collapse: collapse;">
+                <tr>
+
+                    <td>
+                        <div style="height: 110px;">
+
+                            <h2 class="header1">EVALUATION
+                            </h2>
+                            <br />
+
+                            <h3 class="header2">KARNATAKA FOREST DEPARTMENT
+                            </h3>
+                        </div>
+
+                        <div class="logo" style="float: left;">
+                            <asp:Image ID="Image1" ImageUrl="Images/logo1.jpg" Height="70px" Width="70px" runat="server" />
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="nav-bar">
+                            <ul class="nav-menu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Reports</a></li>
+                                <li style="float: right">
+                                    <asp:LinkButton ID="LinkButton9" runat="server" Text="Sign_out"
+                                         /></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="70px" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <table class="footer" width="100%">
+                            <tr>
+                                <td align="left" width="30px" valign="middle">
+                                    <img src="Images/Address-3.png" alt="Address" style="width: 25px; height: 20px;" />
+                                </td>
+                                <td align="left" valign="middle" width="350px">
+                                    <a style="font-size: 9pt; color: white;">ICT Center, Karnataka Forest Department,<br />
+                                        Aranya Bhavan,Malleshwaram 18th Cross,Bangalore</a>
+                                </td>
+                                <td align="left" width="30px" valign="middle">
+                                    <img src="Images/Phone-2.png" alt="Phone" style="width: 20px; height: 15px;" />
+                                </td>
+                                <td align="left" valign="middle" width="100px">
+                                    <a style="font-size: 9pt; color: white;"></a>
+                                </td>
+                                <td align="left" width="30px" valign="middle" width="100px">
+                                    <img src="Images/Email-1.png" alt="email" style="width: 20px; height: 20px;" />
+                                </td>
+                                <td align="left" valign="middle">
+                                    <a style="font-size: 9pt; color: white;"></a>
+                                </td>
+                                <%--  <td align="right" valign="middle">
+                                    <img src="Images/ictlogo.jpg" alt="Phone" style="width: 75px; height: 50px; margin-right: 20px;" />
+                                </td>--%>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+
