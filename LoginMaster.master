@@ -19,6 +19,9 @@
             }
         }
     </script>
+    <style>
+     @import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -29,9 +32,10 @@
             <table>
                 <tr>
                     <td class="auto-style1">
-                        <asp:Image ID="imgLogo" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="100px" ImageUrl="~/new/images/forest home/Seal_of_Karnataka.png" /></td>
+                        <asp:Image ID="imgLogo" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="90px" ImageUrl="~/new/images/forest home/Seal_of_Karnataka.png" /></td>
                     <td align="center">
-                        <h3 color="black" style="font-family: Advent Pro Regular; font-size: 1.5em">ARANYA TICKETING <br />SYSTEM</h3>
+                        <h3 color="black" style="font-family: Advent Pro; font-size: 2em">ARANYA TICKETING SYSTEM</h3>
+                        <h4 color="black" style="font-family: Advent Pro; font-size: 1.75em; float: left;">Karnataka Forest Department</h4>
                     </td>
                 </tr>
             </table>
