@@ -5,15 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Ticket_App : System.Web.UI.Page
+public partial class TicketMaster : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        OnPageLoad();
-    }
 
-     protected void OnPageLoad()
-    {
-        lblUser.Text = "";
     }
 }

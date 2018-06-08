@@ -25,6 +25,7 @@
       background-color: white;
     
 }
+
 .footer
 {
 
@@ -46,9 +47,11 @@
 	font-style:normal;
 	margin-top:0px;
 }
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-family: Myriad Pro;
 }
 
 .topnav {
@@ -103,7 +106,7 @@ body {
   }
 }
 
-  .auto-style1
+.auto-style1
         {
             width: 5px;
         }

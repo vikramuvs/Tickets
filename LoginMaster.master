@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TicketMaster.master.cs" Inherits="TicketMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMaster.master.cs" Inherits="TicketMaster" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="StyleTicketMaster.css" />
+    <link rel="stylesheet" href="Styles/bootstrap.min.css" />
     <title title="Aranya Dashboard">Aranya Dashboard</title>
     <script type="text/javascript">
         function myFunction() {
@@ -37,16 +38,13 @@
         </div>
         <div class="topnav" id="myTopnav">
             <a href="Ticket_App.aspx" class="active">Home</a>
-            <a href="#home">Applications</a>
-            <a href="#contact">Ticket</a>
-            <a href="#changePass">Change Password</a>
-            <a style="float: right" href="#about">Signout</a>
+            <a href="#login">Login</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
         <div id="content">
-            <span style="font-family: Advent Pro Regular">Welcome</span><asp:Label ID="lblUser" runat="server" Text="" Font-Names="Advent Pro Regular"></asp:Label>
+           <%-- <span style="font-family: Advent Pro Regular">Welcome</span><asp:Label ID="lblUser" runat="server" Text="" Font-Names="Advent Pro Regular"></asp:Label>--%>
             <asp:ContentPlaceHolder ID="cphContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
