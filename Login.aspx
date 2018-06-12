@@ -91,9 +91,10 @@
             </tbody>
         </table>
     </div>--%>
+    <div class="container">
     <div class="login-page">
         <div class="form">
-            <form class="login-form">
+           <%-- <form class="login-form">--%>
               <div class="row">
                 <div class="col-md-12">
                     <h5>Enter your Aranya Email credentials here</h5>
@@ -109,12 +110,15 @@
                     </td>
                     <td>
                         <asp:TextBox ID="tbUserName" runat="server" Placeholder="Enter Aranya Email ID" Height="40px"
-                            Width="300px" CssClass="form-control"></asp:TextBox>
+                            Width="300px" CssClass="form-control" required></asp:TextBox>
                     </td>
                     <td style="width: 50px; padding-bottom: 5%; padding-right: 10%;">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="tbUserName"
                             ValidationGroup="valid" Text="*" ErrorMessage="User Name field is empty" ForeColor="Red"
                             Display="Dynamic"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="revUserName" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" runat="server" ControlToValidate="tbUserName" ValidationGroup="valid" Text="*" 
+                            ErrorMessage="Please enter valid email address" Display="Dynamic">
+                            </asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -125,7 +129,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="tbPassword" runat="server" Placeholder="Enter Aranya Email Password"
-                            Height="40px" Width="300px" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            Height="40px" Width="300px" TextMode="Password" CssClass="form-control" required></asp:TextBox>
                     </td>
                     <td style="padding-bottom: 5%; padding-right: 10%;">
                         <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="tbPassword"
@@ -154,9 +158,9 @@
                 </tr>
                 <tr>
                     <td colspan="4">
-                        <asp:ValidationSummary ID="ValidationSummary1" DisplayMode="BulletList" HeaderText="Check the following"
+                        <asp:ValidationSummary ID="ValidationSummary1" DisplayMode="BulletList" CssClass="valid-tooltip" HeaderText="Check the following"
                             runat="server" ForeColor="Red" ValidationGroup="valid" EnableClientScript="true"
-                            Font-Names="Segoe UI" ShowSummary="true" />
+                            Font-Names="Segoe UI" ShowSummary="true" BackColor="#efefef" />
                     </td>
                 </tr>
                 <tr>
@@ -182,7 +186,8 @@
                 runat="server" ForeColor="Red" ValidationGroup="valid" EnableClientScript="true"
                 ShowSummary="true" />
             <asp:Label ID="lblStatus" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>--%>
-            </form>
+           <%-- </form>--%>
         </div>
+    </div>
     </div>
 </asp:Content>
