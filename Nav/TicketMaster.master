@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TicketMaster.master.cs" Inherits="TicketMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="StyleTicketMaster.css" type="text/css" runat="server"/>
+    <link rel="stylesheet" href="Styles/bootstrap.min.css" />
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <table>
+                <tr>
+                    <td class="auto-style1">
+                        <asp:Image ID="Image1" BorderColor="#000066" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="100px" ImageUrl="~/Images/Seal_of_Karnataka.png" /></td>
+                    <td align="center">
+                        <h3 color="black">TICKET TRACKING SYSTEM</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="topnav" id="myTopnav">
+            
+                <a href="#" class="active">Home</a>
+                <a href="#">Applications</a>
+                <a href="RaiseTicket.aspx">Ticket</a>
+                
+                    <asp:LinkButton ID="LinkButton9" runat="server" Text="Sign_out" />
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </div>
+        <div id="content" padding-left: 300px">
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <table class="footer" width="100%">
+            <tr>
+                <td align="left" width="30px" valign="middle">
+                    <img src="Images/Address-3.png" alt="Address" style="width: 25px; height: 20px;" />
+                </td>
+                <td align="left" valign="middle" width="350px">
+                    <a style="font-size: 9pt; color: white;">ICT Center, Karnataka Forest Department,<br />
+                        Aranya Bhavan,Malleshwaram 18th Cross,Bangalore</a>
+                </td>
+                <td align="left" width="30px" valign="middle">
+                    <img src="Images/Phone-2.png" alt="Phone" style="width: 20px; height: 15px;" />
+                </td>
+                <td align="left" valign="middle" width="100px">
+                    <a style="font-size: 9pt; color: white;"></a>
+                </td>
+                <td align="left" width="30px" valign="middle" width="100px">
+                    <img src="Images/Email-1.png" alt="email" style="width: 20px; height: 20px;" />
+                </td>
+                <td align="left" valign="middle">
+                    <a style="font-size: 9pt; color: white;"></a>
+                </td>
+                <td align="right" valign="middle">
+                    <img src="Images/ictlogo.jpg" alt="Phone" style="width: 75px; height: 50px; margin-right: 20px;" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

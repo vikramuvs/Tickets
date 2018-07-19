@@ -1,0 +1,55 @@
+﻿.demo-1 {
+    position:relative;
+    width:240px; 
+   height:155px;
+    overflow:hidden;
+    float:left;
+    margin-right:20px;
+    background-color:black;
+}
+.demo-1 p,.demo-1 h2 {
+    color:#fff;
+    padding:10px;
+    left:-8px;
+    top:   1px;
+    position:relative;
+    text-align:left;
+    
+}
+.demo-1 p {
+    font-family:'Century Gothic';
+    font-size:12px;
+    line-height:18px;
+    margin:0;
+    text-align:left;
+    
+}
+.demo-1 h2 {
+    font-family:'Century Gothic';
+    font-size:20px;
+    line-height:20px;
+    margin:0;
+}
+.effect img {
+    position:absolute;
+    margin:-15px 0;
+    right:0;
+    top:0;
+    cursor:pointer;
+     width:245px; 
+ 
+    -webkit-transition:top .4s ease-in-out,right .4s ease-in-out;
+    -moz-transition:top .4s ease-in-out,right .4s ease-in-out;
+    -o-transition:top .4s ease-in-out,right .4s ease-in-out;
+    transition:top .4s ease-in-out,right .4s ease-in-out
+}
+.effect img.top:hover {
+    top:-230px;
+    right:-330px;
+    padding-bottom:250px;
+    padding-left:350px
+}
+
+
+
+

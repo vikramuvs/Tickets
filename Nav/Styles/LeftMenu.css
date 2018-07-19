@@ -1,0 +1,36 @@
+﻿body {
+}
+#navigation { width:170px;margin-left:6px; }
+#navigation ul { margin:0px; padding:0px; }
+#navigation li { list-style: none; }
+ 
+ul.top-level { background:#25383C; }
+ul.top-level li {
+ border-bottom: #fff solid;
+ border-top: #fff solid;
+ border-width: 1px;
+}
+ 
+#navigation a {
+ color: #fff;
+ cursor: pointer;
+ display:block;
+ height:32px;
+ line-height: 32px;
+ text-indent: 10px;
+ text-decoration:none;
+ width:100%;
+ font-family:'Century Gothic';
+ font-size:0.80em;
+ font-weight:normal;
+}
+ 
+#navigation a:hover{
+ text-decoration:underline;
+}
+ 
+#navigation li:hover {
+ background: #4AA02C;
+ position: relative;
+}
+

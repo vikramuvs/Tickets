@@ -13,6 +13,7 @@
     transition: opacity 400ms ease-in;
     pointer-events: none;
 	overflow-y:auto;
+	height: 120%;
 
 }
 .modalDialog:target {

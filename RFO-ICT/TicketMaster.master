@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TicketMaster.master.cs" Inherits="TicketMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../StyleTicketMaster.css" />
+    <link rel="stylesheet" href="../StyleRaiseTicket.css" type="text/css" />
+    <link rel="Stylesheet" href="../Styles/bootstrap.min.css" />
+    <link rel="Stylesheet" href="Modal.css" />
+    <script type="text/javascript" src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/popper-1.14.3.js" ></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../jquery-ui/jquery-ui.min.js"></script>
+    <link rel="Stylesheet" href="../jquery-ui/jquery-ui.css" />
+    <title title="ICT Sahaayavani"></title>
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <style>
+    .logOutBtn
+    {
+        float: right;
+        height: auto;
+    }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <table>
+                <tr>
+                    <td class="auto-style1">
+                        <asp:Image ID="imgLogo" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="100px" ImageUrl="../Images/kfd logo.jpeg" /></td>
+                    <td align="center" style="padding-left: 20px;">
+                         <h3 color="black" style="font-family: Montserrat; font-size: 2.5em; float: left;">ICT SAHAAYAVANI</h3><br />
+                        <h4 color="black" style="font-family: Roboto; font-size: 1.75em; float: left; line-height: 1em;">Karnataka Forest Department</h4>
+                         <h6 color="black" id="userName" style="font-family: Open Sans; font-size: 1em; position: absolute; right: 10px;" runat="server"> </h6><br />
+                        <h6 id="userRole" color="black" style="font-family: Open Sans; font-size: 1em; position: absolute; right: 10px;" runat="server"> </h6>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="topnav" id="myTopnav">
+            <a href="Ticket_App.aspx" id="home" runat="server" class="active" >Home</a>
+            <a href="LandingPage.aspx" id="Apps" runat="server">Applications</a>
+            <a href="RaiseTicket.aspx" id="Tickets" runat="server">Tickets</a>
+           <%-- <a style="float: right" href="#about">Signout</a>--%>
+            <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-danger logOutBtn" OnClick="logOutButton_Click" Text="LogOut" formnovalidate />
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div id="content">
+           <%-- <span style="font-family: Sans-Serif">Welcome</span><asp:Label ID="lblUser" runat="server" Text=""></asp:Label>--%>
+            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <table class="footer" width="100%">
+            <tr>
+                <td align="left" width="30px" valign="middle">
+                    <img src="../Images/Address-3.png" alt="Address" style="width: 25px; height: 20px;" />
+                </td>
+                <td align="left" valign="middle" width="350px">
+                    <a style="font-size: 9pt; color: white;">ICT Center, Karnataka Forest Department,<br />
+                        Aranya Bhavan,Malleshwaram 18th Cross,Bangalore</a>
+                </td>
+                <td align="left" width="30px" valign="middle">
+                    <img src="../Images/Phone-2.png" alt="Phone" style="width: 20px; height: 15px;" />
+                </td>
+                <td align="left" valign="middle" width="100px">
+                    <a style="font-size: 9pt; color: white;"></a>
+                </td>
+                <td align="left" width="30px" valign="middle" width="100px">
+                    <img src="../Images/Email-1.png" alt="email" style="width: 20px; height: 20px;" />
+                </td>
+                <td align="left" valign="middle">
+                    <a style="font-size: 9pt; color: white;"></a>
+                </td>
+                <%--  <td align="right" valign="middle">
+                                    <img src="Images/ictlogo.jpg" alt="Phone" style="width: 75px; height: 50px; margin-right: 20px;" />
+                                </td>--%>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿#mySidenav a {
+    position: absolute;
+    /*left: -80px;*/
+	left: 0px;
+    transition: 0.3s;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    width: 200px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+	height:100px;
+	z-index: 2;
+}
+
+#mySidenav a:hover {
+    left: 0;
+	width:220px;
+	background-color:#3624d3;
+}
+
+#raiseTicket {
+    top: 300px;
+    background-color: #4CAF50;
+    z-index: 2;
+}
+
+#viewTicket {
+    top: 450px;
+    background-color: #f44336;
+    z-index: 2;
+}
+
+#processTicket {
+    top: 600px;
+    background-color: #209EB2;
+    z-index: 2;
+}
+
+
+#mySidenav1 a {
+    position: absolute;
+    transition: 0.3s;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+	height:100px;
+	z-index: 2;
+}
+
+#mySidenav1 a:hover {
+    left: 0;
+	background-color:#3624d3;
+}
+
+#raiseTicket1 {
+    left: -113px;
+    top: 300px;
+    background-color: #4CAF50;
+    z-index: 2;
+}
+
+#viewTicket1 
+{
+    left: -118px;
+    top: 450px;
+    background-color: #f44336;
+    z-index: 2;
+}
+
+#processTicket1 {
+    left: -143px;
+    top: 600px;
+    background-color: #209EB2;
+    z-index: 2;
+}

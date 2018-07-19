@@ -168,6 +168,11 @@
                         <asp:Label ID="lblStatus" runat="server" Text="" ForeColor="Red" Visible="false"></asp:Label>
                     </td>
                 </tr>
+               <%-- <tr>
+                    <td>
+                    <asp:Button ID="btnClick" runat="server" Text="click" OnClick="btnClick_Click" formnovalidate />
+                    </td>
+                </tr>--%>
             </table>
             <%--<asp:TextBox ID="tbUserName" runat="server" Placeholder="Enter Aranya Email ID" Height="40px"
                 Width="300px" CssClass="form-control"></asp:TextBox>

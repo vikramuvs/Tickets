@@ -3,11 +3,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="StyleTicketMaster.css" />
-    <title title="Aranya Dashboard">Aranya Dashboard</title>
+    <link rel="stylesheet" href="StyleRaiseTicket.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="StyleViewTicket.css" />
+    <link rel="Stylesheet" href="Styles/bootstrap.min.css" />
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/popper-1.14.3.js" ></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.min.js"></script>
+    <link rel="Stylesheet" href="jquery-ui/jquery-ui.css" />
+    <title title="ICT Sahaayavani"></title>
     <script type="text/javascript">
         function myFunction() {
             var x = document.getElementById("myTopnav");
@@ -18,9 +25,15 @@
             }
         }
     </script>
+    <style>
+    .logOutBtn
+    {
+        float: right;
+        height: auto;
+    }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,28 +41,34 @@
             <table>
                 <tr>
                     <td class="auto-style1">
-                        <asp:Image ID="imgLogo" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="100px" ImageUrl="~/new/images/forest home/Seal_of_Karnataka.png" /></td>
-                    <td align="center">
-                        <h3 color="black" style="font-family: Advent Pro Regular; font-size: 1.5em">ARANYA TICKETING <br />SYSTEM</h3>
+                        <asp:Image ID="imgLogo" runat="server" ToolTip="Karnataka Forest Dept" Width="100px" Height="100px" ImageUrl="Images/kfd logo.jpeg" /></td>
+                    <td align="center" style="padding-left: 20px;">
+                         <h3 color="black" style="font-family: Montserrat; font-size: 2.5em; float: left;"><b>ICT SAHAAYAVANI</b></h3><br />
+                        <h4 color="black" style="font-family: Roboto; font-size: 1.65em; float: left;">Karnataka Forest Department</h4>
+                        <h6 color="black" id="userName" style="font-family: Open Sans; font-size: 1em; position: absolute; right: 10px;" runat="server"> </h6><br />
+                        <h6 id="userRole" color="black" style="font-family: Open Sans; font-size: 1em; position: absolute; right: 10px;" runat="server"> </h6>
                     </td>
                 </tr>
             </table>
         </div>
+
         <div class="topnav" id="myTopnav">
-            <a href="Ticket_App.aspx" class="active">Home</a>
-            <a href="#home">Applications</a>
-            <a href="#contact">Ticket</a>
-            <a href="#changePass">Change Password</a>
-            <a style="float: right" href="#about">Signout</a>
+            <a href="Ticket_App.aspx" id="home" runat="server" class="active">Home</a>
+            <a href="LandingPage.aspx" id="Apps" runat="server">Applications</a>
+            <a href="RaiseTicket.aspx" id="Tickets" runat="server">Tickets</a>
+           <%-- <a style="float: right" href="#about">Signout</a>--%>
+            <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-danger logOutBtn" OnClick="logOutButton_Click" Text="LogOut" formnovalidate />
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
         </div>
+
         <div id="content">
-            <span style="font-family: Advent Pro Regular">Welcome</span><asp:Label ID="lblUser" runat="server" Text="" Font-Names="Advent Pro Regular"></asp:Label>
+           <%-- <span style="font-family: Sans-Serif">Welcome</span><asp:Label ID="lblUser" runat="server" Text=""></asp:Label>--%>
             <asp:ContentPlaceHolder ID="cphContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+
         <table class="footer" width="100%">
             <tr>
                 <td align="left" width="30px" valign="middle">
